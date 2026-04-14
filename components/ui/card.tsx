@@ -1,7 +1,20 @@
-export function Card({ children }: any) {
-  return <div style={{ border: "1px solid #ddd", borderRadius: "12px", padding: "16px" }}>{children}</div>;
+import * as React from "react";
+
+export function Card({
+  className = "",
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
+  return (
+    <div
+      className={`rounded-3xl border border-gray-200 bg-white shadow-sm ${className}`}
+      {...props}
+    />
+  );
 }
 
-export function CardContent({ children }: any) {
-  return <div>{children}</div>;
+export function CardContent({
+  className = "",
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
+  return <div className={className} {...props} />;
 }
