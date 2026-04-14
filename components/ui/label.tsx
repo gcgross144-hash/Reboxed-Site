@@ -1,3 +1,13 @@
-export function Label({ children }: any) {
-  return <label style={{ display: "block", marginBottom: "4px" }}>{children}</label>;
+import * as React from "react";
+
+export function Label({
+  className = "",
+  ...props
+}: React.LabelHTMLAttributes<HTMLLabelElement>) {
+  return (
+    <label
+      className={`block text-sm font-semibold text-gray-700 ${className}`}
+      {...props}
+    />
+  );
 }
