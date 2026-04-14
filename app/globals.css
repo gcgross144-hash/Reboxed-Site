@@ -10,10 +10,15 @@ body {
 
 body {
   font-family: Arial, sans-serif;
-  background: white;
+  background: #ffffff;
   color: #1f2937;
 }
 
 * {
   box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
